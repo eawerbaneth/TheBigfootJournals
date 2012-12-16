@@ -1,0 +1,63 @@
+#Template: 
+#[num]#description#contents#active?[y or n]#[num available from here]
+#-[num]#type+args
+#Args Format:
+#	0+Character+Destination -> character goto destination
+#	1+Character+conv_start_index-conv_end_index -> open conversation indices
+#	2+Character+conv_start_index-conv_end_index -> closes conversation indices
+#	3+item -> item becomes available to pick up
+#	6+character -> send out an apb for a picture of that person
+#A1(1-8)
+1#description#...#y#2 9 15 16 21 0
+2#Excuse me?#Whatsup?#y#3 0
+3#I'm looking for work, is the manager around?#HA. My lazy ass dad owns this place, and he's busy out of town. So wihle he's gone, I'm stuck here in charge. I don't have any work, because no one buys any of this shit here, but if you really are that desperate, I got this take home test I REALLLY don't wanna do tonight.#y#4
+4#No way, you are only cheating yourself!#Jeez, look at this guy on his high horse of morality. You're the one asking me for things to do. If you change your mind, I'll be here as always. And how about this, if you do me this solid, I can spare some crap we have lying around here.#y#5 0
+5#Like what?#Dude, I got this bitchin' camera in here, maybe we could work out a trade. Just do the test, and make sure I get a good grade. If I fail another class my dad's gonna bring down the fury of god on my ass.#y#6 7 0
+6#Okay, gimme the test#Ok, great! Alright, the first question is "Who was the first President?"#y#23 24
+7#Have you heard about the bigfoot rumors?#Oh man, not this crap again. Every lame tourist and their like, three annoying ass kids come in here, buying Bigfoot T-shirts, Bigfoot hunting gear, Bigfoot beer cozies. I'm tired of having to ring up all the damn sales. I don't believe the rumors, but some of the other nuts in this town do.#y#0
+#turn in camera quest, open up camera and turn off A1 and turn on A2
+8#I finished the test#Ok dude, I admit, you did it. Here's your shiny, new, vintage old ass camera. Thanks bud.#y#0
+-8#3+camera
+-8#1+Robbie+9-9
+-8#2+Robbie+2-2
+#A2(9-15)
+9#Hey#Hey man, are you busy?#n#10
+10#What is it you need?#Well... SINCE YOU ASKED.#y#11
+11#You asked.#I've been working on this like, collage, of everyone in town. You know, for like, school and shit. And I need a picture of the mayor to complete it. So if you could just use that camera I gave you and snap a few pics of her, that'd be sooooo helpful.#y#12
+12#Why can't you do it yourself?#You see, here's the thing, she said next time I'm taking pictures of her she is gonna break my freaking hands. I cleaned that up a bit for you, but you get the picture. So also, I don't think it's the best idea to let her see you when you take these pictures. Just keep it on the DL and come back when you've got them.#y#13
+13#What's in it for me?#Can't you just help a guy out?! I mean, c'mon, the internet is slow as hell here. I mean, this is due soon. Ok, I've got this cool megaphone here. I saw on this nature BS Bigfoot hunter show that you can yell monkey noises to get Bigfoot's attention. Maybe you could use it to get your furry friend's attention.#y#14
+14#Ok, this is getting weird but I'll be back.#Alright, man, see you later.#y#0
+-14#2+Robbie+9-9
+-14#6+Yang
+#turn in taking pictures of mayor (from the pictures prefab)
+15#Here are the pictures.#YESSSSSS. You are my new best friend, and by best friend I mean I hate you a little less now. These are good, these will do just fine.#n#29
+#A3
+16#How's it going?#Hey my good pal, what you up to today?#n#17
+17#Not much, do you have work?#I do I do, listen, I have this....horse, and it's totally sick and everything, and I need some meds for it from Dr. Salt, but you know, I can't leave the store or else I'd totally get them for my horse myself. Could you be a pal and run over and grab some horse tranquilizers for me?#y#18
+18#I've never seen a horse at your house.#You don't know everything about me man! It's like, not around here... look just, get the meds, and I've got something reallly worth your while.#y#19
+19#What?#I totally snapped a pic of Bigfoot last night with my phone. If you do me this favor, I'll give it to you.#y#20
+20#Okay, I'll be back for that picture.#....Ok, whatever you say man.#y#0
+-20#1+Saito+5-5
+-20#2+Robbie+16-16
+21#Do you have any deer cams?#Deer cams? Yeah we got those, they're around here--- wait a minute. I hope you're gonna use these for what I think you're going to. Right, you feel me? You get it. Ok man, here they are. Free of charge, except I expect some sweet pics later on if you know what I mean...#n#22
+22#Um, ok, thanks...#Alrigggggggght.#y#0
+-22#2+Robbie+21-21
+#-22#3+deercam
+-22#1+Mansfield+4-4
+#TEST
+23#Washington... duh.#Ok, next question: "Who was the first African American President?"#y#25 26
+24#Obviously it's Lincoln.#Ok, next question: "Who was the first African American President?"#y#25 26
+25#President Obama... you really aren't good at this.#Alright last one: "Who is famous for discovering America?"#y#27 28
+26#Woodrow Wilson#Alright last one: "Who is famous for discovering America?"#y#27 28
+27#Christopher Columbus.#Ok dude, I admit, you did it. Here's your shiny, new, vintage old ass camera. Thanks bud.#y#0
+-27#3+PickupCamera
+-27#1+Robbie+9-9
+-27#2+Robbie+2-2
+28#Captain Kirk.#Ok dude, I admit, you did it. Here's your shiny, new, vintage old ass camera. Thanks bud.#y#0
+-28#3+PickupCamera
+-28#1+Robbie+9-9
+-28#2+Robbie+2-2
+29#What do you plan on doing with those?#Don't ruin the moment, bro.#y#0
+-29#3+PickupCallBlaster
+-29#1+Robbie+16-16
+-29#2+Robbie+15-15

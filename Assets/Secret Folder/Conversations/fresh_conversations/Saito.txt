@@ -1,0 +1,51 @@
+#Template: 
+#[num]#description#contents#active?[y or n]#[num available from here]
+#-[num]#DayOfWeek#hh:mm:ss#type+args
+#Args Format:
+#	0+Character+Destination -> character goto destination
+#	1+Character+conv_start_index-conv_end_index -> open conversation indices
+#	2+Character+conv_start_index-conv_end_index -> closes conversation indices
+#	3+item -> item becomes available to pick up
+#	4 -> GAME OVER
+#	5+description+x y -> add map point to map
+1##Hello, son, what can I do for you today?#y#2 4 5 10 14 19 0
+2#Hello, are you Dr. Salt?#Yes, I am. You're Thelma's nephew, right? Nice to finally meet you. How are you enjoying your stay at Ash Mountain?#y#3
+3#It's been good, but I'm looking for work. Do you have anything available?#Well I might, but to be frank, son, I don't know you well enough yet. I only work with those I really know I can trust. Maybe talk to some folks around town, see how it goes. Then we'll talk again later.#y#4 0
+4#Do you know anything about the Bigfoot rumors?#Son, I'm not the kind of man to blindly believe in tavern rumors.#y#0
+#C-ONE
+5#Robbie asked me to get horse pills, he said I should talk to you.#Oh did he now? Well, I appreciate you helping the people around town out, but I thinmk that is enough help for our young friend Robbie. Believe me, he doesn't have a horse, and I've been giving him placebos for all his animal needs. How about instead of enabling our local junkie, you give me a hand with something more pressing?#n#6
+6#What do you need?#Have you seen that hunter staying in town? I believe his name is Mansfield. I don't appreciate all the hunters coming into our woods, tearing up the landscape and poaching the local fauna. I need you to "borrow" Mansfield's journal, and bring it back to me.#y#7
+7#Isn't that stealing?#Well now, let's look at it this way. Borrowing his journal isn't going to hurt him any, but he may be here to poach creatures illegally on our land. I'm just trying to prevent any future crimes.#y#8 9
+8#Ok, I'll be back.#Good to hear it, son.#y#0
+-8#2+Saito+2-5
+-8#6+mansfieldquest+Saito+10
+9#No#Well, let me know if you change your mind.#y#0
+-9#2+Saito+2-5
+-9#6+mansfieldquest+Saito+10
+#C-TWO
+10#I got Mansfield's journal.#Excellent! Now let's see why he's here... Oh my, it's worse than I thought. He is here for this "Bigfoot" nonsense. Maybe you can help me out further.#n#11
+-10#6+mansfieldquestdone
+11#What do you need?#There is a man who lives deep in the woods. I haven't seen him in many years, but I will mark the last place I saw him on your map.#y#12
+12#He lives on the mountain?#He is a strange man, not fit for the complications of society. He knows more about these mountains than anyone else, though. His name is Otis, and he can help us learn about Mansfield and tell us if anything illegal is happening.#y#13
+13#I guess I'll be off then#Wait, before you go... Otis is... quite an odd fellow. Don't be alarmed by his looks, or the way he talks... or his odor. He is a friend.#y#0
+-13#2+Saito+10-10
+-13#1+Yang+12-12
+-13#1+Otis+2-2
+-13#5+Otis' House+1903 486
+14#I talked to Otis.#Good! What did he say?#n#15
+15#He said you believe in Bigfoot, he said you search the woods for him.#Did he? Well I guess there's no use hiding it. I do believe in Bigfoot. I have seen him, and I wish to study him further. But I do not want to hurt him or take him out of his natural environment.#y#16
+16#He is real then? What is he?#I do not yet know. What I do know is that he is out there and that I wish to learn more, if I could count on your assistance. This is why I had you speak to Otis. Did he tell you anything else?#y#17
+17#He said Bigfoot likes grapes.#Excellent! Now we have something to go on! Here, I have some around. Take these grapes and see if you can find the creature. Get him to eat some of the grapes, then come back and talk to me again. I will have one final task for you.#y#18
+-17#3+GrapePickup
+-17#2+Saito+4-4
+-17#2+Saito+14-14
+18#Isn't Bigfoot dangerous? All the hunters...#Bigfoot would not harm a fly. I know for a fact he didn't harm any hunters. You will be in no danger.#y#0
+#c4 - Kill Mansfield - activate after you've fed Bigfoot
+19#I saw him! I saw Bigfoot and fed him the grapes!#I know, I saw. I think it is time that I come clean.#n#20
+20#What do you mean?#You have heard of the disappearances, correct? Well Bigfoot is a gentle creature and wouldn't hurt anyone, even in self defense. That is why I had to step up. I had to protect him from the hunters who would do him harm.#y#21
+21#You killed them?#Yes, I had to see. And now it comes time again, that another hunter must disappear into the forest. Mansfield means to hurt Bigfoot, and you must stop him. You must kill him. I am getting older, and now I cannot bear this burden on my own. You must help me protect Bigfoot.#y#22 23
+22#No! I am not a murderer! I am going to the Mayor!#That is unfortunate. I thought we could work together...#y#0
+-22#4+dead
+23#Ok, I will do it to protect him.#Here is a gun. When Mansfield enters the woods at night, kill him, and I will help you dispose of the body.#y#0
+-23#3+PickupGunSalt
+-23#1+Yang+6-6

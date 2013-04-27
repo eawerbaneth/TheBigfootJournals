@@ -1,9 +1,0 @@
-1#description#Is that you? I haven't seen you since you were a little boy. I'm glad you moved into your Aunt Thelma's house, God rest her soul. It's nice to see you back here, but I reckon it won't be long before you get bored unless you find something to keep yourself occupied.#y#2 6 0
-2#What is there to do around town?#Well, there isn't much in the way of work around here but if you ask around you may find some errands to run. But if you're looking for something a little more interesting, there have been rumors circulating around town that there may be some kind of creature in the woods.#y#3
-3#What kind of creature?#Well, if you believe the rumors, and I'm not saying I do, but if you believe, they say it's an ape-like creature. Seven feet tall, with dark matted hair all over its body, and with a stench so putrid you can smell it for miles!#y#4
-4#You mean Bigfoot is here in Ash Mountain?#I didn't say that! I'm just saying what the scuttlebutt is around town. But you be careful venturing into the woods, though. There have been some strange disappearances over the last few months, and I don't want you getting yourself involved in anything dangerous. If you want to find out some more, there's been a strange hunter lodging in my B&B, name's Mansfield. Talk to him for some more info on the matter.#y#5
-5#Thanks, I'll see about that.#If you need any supplies, head on down to the general store, and don't be turned away by that knucklehead Robbie. If you need anything, I'm sure the store will have it.#y#0
-6#I have pictures of Bigfoot, are these useful?#Oh my dearie! These are amazing! We can send these to one of my periodicals! We'll make a fortune! The town will get so much business and my B&B will be booked for years to come! Give me those pictures!#n#7 8
-7#Ok, here they are!#Nice job! I'll get these in the mail right away!#y#0
--7#4+picture
-8#Maybe I'll hold onto them for a little longer.#Well, do let me know if you change your mind!#y#0
